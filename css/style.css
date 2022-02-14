@@ -15,3 +15,50 @@
 .container {
   width: 1352px;
 }
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background: var(--color-white);
+  box-shadow: 0px 3px 6px #00000029;
+  height: 70px;
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font: normal normal 300 32px/37px var(--font-raleway);
+  letter-spacing: 0px;
+  color: var(--color-primary);
+}
+
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 95px;
+}
+
+.nav__el {
+  padding: 28px 0;
+}
+
+.nav__el-link {
+  text-decoration: none;
+  font: normal normal bold 11px/15px var(--font-open-sans);
+  letter-spacing: 3.28px;
+  color: var(--color-gray);
+}
+
+.nav__el:hover {
+  cursor: pointer;
+  color: var(--color-black);
+  border-bottom: 4px solid var(--color-primary);
+}
+.nav__el:hover .nav__el-link {
+  color: var(--color-black);
+}
