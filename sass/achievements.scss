@@ -1,0 +1,113 @@
+.achievements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 531px;
+
+  &__h2 {
+    font: 36px var(--font-raleway);
+    margin-top: 100px;
+  }
+
+  &_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 290px;
+    margin-top: 100px;
+    width: 100vw;
+    height: 100%;
+  }
+
+  .achievements__el {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-img-1 {
+      position: relative;
+      width: 62.71px;
+      height: 62.71px;
+      background: url(../assets/Person.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &-img-1::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 63px;
+      height: 63px;
+      background-color: var(--color-redish);
+      border-radius: 50%;
+      top: 0;
+      left: -25px;
+      z-index: -1;
+    }
+
+    &-img-2 {
+      position: relative;
+      width: 62.71px;
+      height: 62.71px;
+      background: url(../assets/Eye.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &-img-2::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 63px;
+      height: 63px;
+      background-color: var(--color-primary);
+      border-radius: 50%;
+      top: 0;
+      left: -25px;
+      z-index: -1;
+    }
+
+    &-img-3 {
+      position: relative;
+      width: 62.71px;
+      height: 62.71px;
+      background: url(../assets/Catalog.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &-img-3::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 63px;
+      height: 63px;
+      background-color: var(--color-green);
+      border-radius: 50%;
+      top: 0;
+      left: -25px;
+      z-index: -1;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+    }
+
+    &-text-h3 {
+      font: 800 20px var(--font-raleway);
+      margin-top: 14px;
+    }
+
+    &-text-p {
+      font: 17px var(--font-raleway);
+      color: var(--color-gray);
+      width: 150px;
+      text-align: center;
+    }
+  }
+}

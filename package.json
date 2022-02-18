@@ -1,0 +1,21 @@
+{
+  "name": "bestshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "build:css": "compile:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DamianKonc/BestShop.git"
+  },
+  "author": "Damian Koncewicz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DamianKonc/BestShop/issues"
+  },
+  "homepage": "https://github.com/DamianKonc/BestShop#readme"
+}

@@ -1,0 +1,90 @@
+.form {
+  width: 896px;
+  height: 376px;
+  margin: 159px auto;
+  display: flex;
+
+  &__info {
+    width: 50%;
+    height: 100%;
+
+    &-header {
+      text-align: left;
+      font-family: var(--font-raleway);
+      font-size: 49px;
+      margin-bottom: 22px;
+    }
+
+    &-p {
+      text-align: left;
+      font-family: var(--font-open-sans);
+      margin-bottom: 42px;
+    }
+
+    &-mail,
+    &-tel {
+      font-family: var(--font-open-sans);
+      font-weight: 600;
+      color: var(--color-gray);
+    }
+  }
+  &__send {
+    width: 440px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &-inputs {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #95989a;
+
+      &-name,
+      &-email {
+        font-family: var(--font-open-sans);
+        font-weight: bold;
+        font-size: 11px;
+        letter-spacing: 3.28px;
+        color: var(--color-primary);
+      }
+
+      &-email {
+        padding-top: 57px;
+        border-top: 1px solid #95989a;
+      }
+      &-name-input,
+      &-email-input {
+        border: none;
+        line-height: 40px;
+      }
+    }
+
+    &-check {
+      display: flex;
+
+      &-p {
+        width: 405px;
+        text-align: left;
+        font-family: var(--font-open-sans);
+        font-size: 12px;
+        color: #707070;
+        margin-left: 10px;
+      }
+    }
+
+    &-btn {
+      font-family: var(--font-open-sans);
+      font-weight: bold;
+      font-size: 13px;
+      padding: 20px 97px;
+      color: var(--color-white);
+      background-color: var(--color-primary);
+      box-shadow: 5px 10px 14px var(--color-primary-shadow);
+      border: none;
+      border-radius: 35px;
+      margin-top: 20px;
+      align-self: flex-end;
+    }
+  }
+}
