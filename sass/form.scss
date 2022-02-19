@@ -63,6 +63,13 @@
     &-check {
       display: flex;
 
+      &-checkbox {
+        appearance: none;
+        background: #5f1f1f 0% 0% no-repeat padding-box;
+        border: 1px solid #47b4fc;
+        border-radius: 4px;
+      }
+
       &-p {
         width: 405px;
         text-align: left;

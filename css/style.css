@@ -19,7 +19,7 @@
   background: var(--color-white);
   box-shadow: 0px 3px 6px #00000029;
   height: 70px;
-  z-index: 200; }
+  z-index: 0; }
   .nav__logo {
     font: normal normal 300 32px/37px var(--font-raleway);
     letter-spacing: 0px;
@@ -68,7 +68,7 @@
     padding: 22px 177px; }
   .header__img {
     height: 594px;
-    width: 100vw;
+    width: 99vw;
     background: url("../assets/Background.png");
     background-position: center;
     background-size: cover;
@@ -171,8 +171,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 65px;
-  padding: 105px 251px; }
+  padding: 105px 251px;
+  gap: 61px; }
   .pros__el {
     width: 1124px;
     height: 370px;
@@ -201,34 +201,14 @@
         height: 294px;
         display: flex;
         justify-content: flex-start;
-        align-items: flex-end;
-        z-index: 1; }
+        align-items: flex-end; }
         .pros__el-1-img-box-pic {
           width: 387px;
           height: 219px;
           background-image: url(../assets/Macbook.png);
           background-position: center;
           background-size: contain;
-          background-repeat: no-repeat;
-          position: relative; }
-          .pros__el-1-img-box-pic::before {
-            content: "";
-            display: block;
-            width: 150px;
-            height: 150px;
-            background-color: var(--color-redish);
-            border-radius: 41px;
-            transform: rotate(45deg);
-            position: absolute;
-            right: 0px;
-            top: -20px;
-            z-index: -1; }
-    .pros__el-line-1 {
-      margin-top: 50px;
-      border: 2px solid var(--color-redish);
-      width: 328px;
-      bottom: 0;
-      left: 0; }
+          background-repeat: no-repeat; }
     .pros__el-2 {
       flex-direction: row-reverse;
       align-items: center;
@@ -243,29 +223,12 @@
       .pros__el-2-img {
         width: 426px;
         height: 328px;
-        background: transparent url(../assets/iPhone.png);
+        background-image: url(../assets/iPhone.png);
         background-position: center;
         background-size: contain;
-        background-repeat: no-repeat;
-        position: relative; }
-        .pros__el-2-img::before {
-          content: "";
-          display: block;
-          width: 320px;
-          height: 320px;
-          background-color: #07ace6;
-          border-radius: 50%;
-          position: absolute;
-          top: -15px;
-          left: 0; }
-    .pros__el-line-2 {
-      margin-top: 50px;
-      border: 2px solid var(--color-primary);
-      width: 328px;
-      bottom: 0;
-      left: 0; }
+        background-repeat: no-repeat; }
     .pros__el-text-3 {
-      width: 53%;
+      width: 624px;
       height: 370px;
       background-color: var(--color-white);
       display: flex;
@@ -277,12 +240,6 @@
         .pros__el-text-3-wrapper-h2 {
           width: 348px;
           height: 84px; }
-    .pros__el-line-3 {
-      margin-top: 50px;
-      border: 2px solid var(--color-green);
-      width: 44%;
-      bottom: 0;
-      left: 0; }
     .pros__el-box-3 {
       width: 440px;
       height: 370px;
@@ -447,6 +404,11 @@
         line-height: 40px; }
     .form__send-check {
       display: flex; }
+      .form__send-check-checkbox {
+        appearance: none;
+        background: #5f1f1f 0% 0% no-repeat padding-box;
+        border: 1px solid #47b4fc;
+        border-radius: 4px; }
       .form__send-check-p {
         width: 405px;
         text-align: left;
