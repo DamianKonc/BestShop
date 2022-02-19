@@ -10,6 +10,7 @@
     letter-spacing: 0;
     width: 100vw;
     text-align: center;
+    margin-top: 100px;
   }
   &__el {
     width: 372px;
@@ -27,6 +28,18 @@
       font-weight: bold;
       margin-top: 34px;
       margin-bottom: 14px;
+
+      &-1 {
+        color: var(--color-redish);
+      }
+
+      &-2 {
+        color: #07ace6;
+      }
+
+      &-3 {
+        color: var(--color-green);
+      }
     }
 
     &-price {
@@ -40,11 +53,14 @@
       display: flex;
       flex-flow: column;
       gap: 20px;
-      &-el {
+
+      .pricing-list-el {
         &-text {
-          text-align: center;
           font-family: var(--font-open-sans);
           font-size: 14px;
+          position: relative;
+          top: 0;
+          left: -20px;
         }
       }
     }
@@ -58,6 +74,61 @@
       border-radius: 23px;
       position: absolute;
       bottom: -23px;
+
+      &-1 {
+        background-color: var(--color-redish);
+      }
+      &-2 {
+        background-color: #07ace6;
+      }
+      &-3 {
+        background-color: var(--color-green);
+      }
     }
+    &-1 {
+      border-color: var(--color-redish);
+    }
+
+    &-2 {
+      border-color: #07ace6;
+    }
+    &-3 {
+      border-color: var(--color-green);
+    }
+  }
+}
+
+.text-sudo-active {
+  &::before {
+    content: url(/assets/Checkmark.svg);
+    fill: #55dfb4;
+    display: block;
+    width: 11px;
+    height: 10px;
+    border: 1px solid #55dfb4;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: -20px;
+  }
+}
+
+.text-sudo-unactive {
+  &::before {
+    content: "X";
+    font-family: var(--font-raleway);
+    line-height: 11px;
+    font-size: 9px;
+    font-weight: bold;
+    color: #eb476e;
+    text-align: center;
+    display: block;
+    width: 11px;
+    height: 10px;
+    border: 1px solid #eb476e;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: -20px;
   }
 }

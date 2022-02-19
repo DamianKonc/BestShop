@@ -171,8 +171,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 105px 251px;
-  gap: 61px; }
+  gap: 65px;
+  padding: 105px 251px; }
   .pros__el {
     width: 1124px;
     height: 370px;
@@ -201,14 +201,34 @@
         height: 294px;
         display: flex;
         justify-content: flex-start;
-        align-items: flex-end; }
+        align-items: flex-end;
+        z-index: 1; }
         .pros__el-1-img-box-pic {
           width: 387px;
           height: 219px;
           background-image: url(../assets/Macbook.png);
           background-position: center;
           background-size: contain;
-          background-repeat: no-repeat; }
+          background-repeat: no-repeat;
+          position: relative; }
+          .pros__el-1-img-box-pic::before {
+            content: "";
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: var(--color-redish);
+            border-radius: 41px;
+            transform: rotate(45deg);
+            position: absolute;
+            right: 0px;
+            top: -20px;
+            z-index: -1; }
+    .pros__el-line-1 {
+      margin-top: 50px;
+      border: 2px solid var(--color-redish);
+      width: 328px;
+      bottom: 0;
+      left: 0; }
     .pros__el-2 {
       flex-direction: row-reverse;
       align-items: center;
@@ -223,12 +243,29 @@
       .pros__el-2-img {
         width: 426px;
         height: 328px;
-        background-image: url(../assets/iPhone.png);
+        background: transparent url(../assets/iPhone.png);
         background-position: center;
         background-size: contain;
-        background-repeat: no-repeat; }
+        background-repeat: no-repeat;
+        position: relative; }
+        .pros__el-2-img::before {
+          content: "";
+          display: block;
+          width: 320px;
+          height: 320px;
+          background-color: #07ace6;
+          border-radius: 50%;
+          position: absolute;
+          top: -15px;
+          left: 0; }
+    .pros__el-line-2 {
+      margin-top: 50px;
+      border: 2px solid var(--color-primary);
+      width: 328px;
+      bottom: 0;
+      left: 0; }
     .pros__el-text-3 {
-      width: 624px;
+      width: 53%;
       height: 370px;
       background-color: var(--color-white);
       display: flex;
@@ -240,6 +277,12 @@
         .pros__el-text-3-wrapper-h2 {
           width: 348px;
           height: 84px; }
+    .pros__el-line-3 {
+      margin-top: 50px;
+      border: 2px solid var(--color-green);
+      width: 44%;
+      bottom: 0;
+      left: 0; }
     .pros__el-box-3 {
       width: 440px;
       height: 370px;
@@ -266,7 +309,8 @@
     font-size: 36px;
     letter-spacing: 0;
     width: 100vw;
-    text-align: center; }
+    text-align: center;
+    margin-top: 100px; }
   .pricing__el {
     width: 372px;
     height: 461px;
@@ -282,6 +326,12 @@
       font-weight: bold;
       margin-top: 34px;
       margin-bottom: 14px; }
+      .pricing__el-h3-1 {
+        color: var(--color-redish); }
+      .pricing__el-h3-2 {
+        color: #07ace6; }
+      .pricing__el-h3-3 {
+        color: var(--color-green); }
     .pricing__el-price {
       font-family: var(--font-open-sans);
       font-size: 46px;
@@ -291,10 +341,12 @@
       display: flex;
       flex-flow: column;
       gap: 20px; }
-      .pricing__el-list-el-text {
-        text-align: center;
+      .pricing__el-list .pricing-list-el-text {
         font-family: var(--font-open-sans);
-        font-size: 14px; }
+        font-size: 14px;
+        position: relative;
+        top: 0;
+        left: -20px; }
     .pricing__el-btn {
       font-family: var(--font-open-sans);
       font-size: 13px;
@@ -305,6 +357,47 @@
       border-radius: 23px;
       position: absolute;
       bottom: -23px; }
+      .pricing__el-btn-1 {
+        background-color: var(--color-redish); }
+      .pricing__el-btn-2 {
+        background-color: #07ace6; }
+      .pricing__el-btn-3 {
+        background-color: var(--color-green); }
+    .pricing__el-1 {
+      border-color: var(--color-redish); }
+    .pricing__el-2 {
+      border-color: #07ace6; }
+    .pricing__el-3 {
+      border-color: var(--color-green); }
+
+.text-sudo-active::before {
+  content: url(/assets/Checkmark.svg);
+  fill: #55dfb4;
+  display: block;
+  width: 11px;
+  height: 10px;
+  border: 1px solid #55dfb4;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: -20px; }
+
+.text-sudo-unactive::before {
+  content: "X";
+  font-family: var(--font-raleway);
+  line-height: 11px;
+  font-size: 9px;
+  font-weight: bold;
+  color: #eb476e;
+  text-align: center;
+  display: block;
+  width: 11px;
+  height: 10px;
+  border: 1px solid #eb476e;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: -20px; }
 
 .container {
   width: 1352px; }
@@ -373,3 +466,32 @@
       border-radius: 35px;
       margin-top: 20px;
       align-self: flex-end; }
+
+.footer {
+  height: 89px;
+  background-color: var(--color-light-gray);
+  box-shadow: 0px -5px 40px #00000029; }
+  .footer-img {
+    width: 24px;
+    height: 24px; }
+  .footer__logo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; }
+    .footer__logo-header {
+      font-family: var(--font-raleway);
+      font-weight: 300;
+      font-size: 26px;
+      color: var(--color-primary); }
+  .footer__socials {
+    display: flex;
+    align-items: center;
+    gap: 20px; }
+
+.footer .container {
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }

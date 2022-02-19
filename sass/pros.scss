@@ -6,8 +6,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 65px;
   padding: 105px 251px;
-  gap: 61px;
 
   &__el {
     width: 1124px;
@@ -29,10 +29,12 @@
       text-align: left;
       margin-bottom: 30px;
     }
+
     &-1 {
       align-items: center;
       justify-content: center;
       gap: 169px;
+
       &-text {
         width: 416px;
         height: 188px;
@@ -43,6 +45,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
+        z-index: 1;
         &-pic {
           width: 387px;
           height: 219px;
@@ -50,8 +53,32 @@
           background-position: center;
           background-size: contain;
           background-repeat: no-repeat;
+          position: relative;
+
+          &::before {
+            content: "";
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: var(--color-redish);
+            border-radius: 41px;
+            transform: rotate(45deg);
+            position: absolute;
+            right: 0px;
+            top: -20px;
+            z-index: -1;
+          }
         }
       }
+    }
+
+    &-line-1 {
+      margin-top: 50px;
+      border: 2px solid var(--color-redish);
+      width: 328px;
+      // position: absolute;
+      bottom: 0;
+      left: 0;
     }
     &-2 {
       flex-direction: row-reverse;
@@ -70,15 +97,36 @@
       &-img {
         width: 426px;
         height: 328px;
-        background-image: url(../assets/iPhone.png);
+        background: transparent url(../assets/iPhone.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
+        position: relative;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 320px;
+          height: 320px;
+          background-color: #07ace6;
+          border-radius: 50%;
+          position: absolute;
+          top: -15px;
+          left: 0;
+        }
       }
+    }
+    &-line-2 {
+      margin-top: 50px;
+      border: 2px solid var(--color-primary);
+      width: 328px;
+      // position: absolute;
+      bottom: 0;
+      left: 0;
     }
 
     &-text-3 {
-      width: 624px;
+      width: 53%;
       height: 370px;
       background-color: var(--color-white);
       display: flex;
@@ -96,6 +144,14 @@
         &-p {
         }
       }
+    }
+    &-line-3 {
+      margin-top: 50px;
+      border: 2px solid var(--color-green);
+      width: 44%;
+      // position: absolute;
+      bottom: 0;
+      left: 0;
     }
 
     &-box-3 {
