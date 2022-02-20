@@ -83,3 +83,211 @@ html {
     background-image: url(../assets/Background.png);
     background-position: center;
     background-size: cover; }
+
+.achievements {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem; }
+  .achievements__h2 {
+    padding-top: 10rem;
+    font-family: var(--font-raleway);
+    font-size: 3.6rem;
+    margin-bottom: 10rem; }
+  .achievements__list {
+    display: flex;
+    gap: 185px;
+    margin-bottom: 12rem; }
+    .achievements__list-el {
+      height: 168px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center; }
+      .achievements__list-el-img-1 {
+        width: 6.3rem;
+        height: 6.3rem;
+        background-color: var(--color-redish);
+        border-radius: 50%;
+        position: relative; }
+        .achievements__list-el-img-1::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 4.4rem;
+          height: 5.2rem;
+          background: url(../assets/Person.svg);
+          background-position: center;
+          background-size: cover;
+          z-index: 1;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -20%; }
+      .achievements__list-el-img-2 {
+        width: 6.3rem;
+        height: 6.3rem;
+        background-color: var(--color-primary);
+        border-radius: 50%;
+        position: relative; }
+        .achievements__list-el-img-2::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 6.5rem;
+          height: 3.7rem;
+          background: url(../assets/Eye.svg);
+          background-position: center;
+          background-size: cover;
+          z-index: 1;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -50%; }
+      .achievements__list-el-img-3 {
+        width: 6.3rem;
+        height: 6.3rem;
+        background-color: var(--color-green);
+        border-radius: 50%;
+        position: relative; }
+        .achievements__list-el-img-3::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 5.2rem;
+          height: 4.8rem;
+          background: url(../assets/Catalog.svg);
+          background-position: center;
+          background-size: cover;
+          z-index: 1;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -50%; }
+      .achievements__list-el-text {
+        margin-top: 2.5rem; }
+        .achievements__list-el-text-header {
+          font-family: var(--font-raleway);
+          font-size: 2rem;
+          font-weight: 800;
+          letter-spacing: 5.96px;
+          text-align: center;
+          margin-bottom: 2rem; }
+        .achievements__list-el-text-p {
+          font-family: var(--font-raleway);
+          font-size: 1.7rem;
+          color: var(--color-gray);
+          text-align: center;
+          max-width: 130px; }
+
+.pros {
+  background-color: var(--color-light-gray);
+  padding: 10.5rem 25.1rem; }
+  .pros .wrapper {
+    background-color: var(--color-light-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3.7rem; }
+  .pros__el {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-white);
+    width: 112.4rem;
+    height: 370px; }
+    .pros__el-2 {
+      flex-direction: row-reverse; }
+    .pros__el-3 {
+      background-color: var(--color-light-gray); }
+    .pros__el-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 41.6rem; }
+      .pros__el-text-1 {
+        margin-left: 3.5rem; }
+      .pros__el-text-2 {
+        margin-right: 2rem; }
+      .pros__el-text-3 {
+        background-color: white;
+        width: 62.3rem; }
+      .pros__el-text-header {
+        font-family: var(--font-raleway);
+        font-size: 3.6rem;
+        margin-bottom: 3rem; }
+      .pros__el-text-paragraph {
+        font-family: var(--font-open-sans);
+        font-size: 1.6rem;
+        margin-bottom: 5rem; }
+    .pros__el-line-1 {
+      border-bottom: 4px solid var(--color-redish);
+      width: 32.8rem; }
+    .pros__el-line-2 {
+      border-bottom: 4px solid var(--color-primary);
+      width: 32.8rem; }
+    .pros__el-line-3 {
+      border-bottom: 4px solid var(--color-green);
+      width: 32.8rem; }
+    .pros__el-img-box {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      z-index: 2; }
+      .pros__el-img-box-pic-1 {
+        position: absolute;
+        width: 38.7rem;
+        height: 22rem;
+        background: url(../assets/Macbook.png);
+        background-position: center;
+        background-size: cover;
+        bottom: 3.8rem;
+        right: 11.8rem; }
+        .pros__el-img-box-pic-1::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 20rem;
+          height: 20rem;
+          background-color: var(--color-redish);
+          border-radius: 41px;
+          transform: rotate(45deg);
+          right: -1rem;
+          top: -3.5rem;
+          z-index: -1; }
+      .pros__el-img-box-pic-2 {
+        position: absolute;
+        width: 42.6rem;
+        height: 32.8rem;
+        background: url(../assets/iPhone.png);
+        background-position: center;
+        background-size: cover;
+        top: 2.9rem;
+        left: 7rem; }
+        .pros__el-img-box-pic-2::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 32rem;
+          height: 32rem;
+          background-color: var(--color-primary);
+          border-radius: 50%;
+          transform: rotate(45deg);
+          left: 0;
+          top: 0;
+          z-index: -1; }
+      .pros__el-img-box-3 {
+        width: 44rem;
+        height: 37rem;
+        background-color: var(--color-green);
+        position: relative; }
+      .pros__el-img-box-pic-3 {
+        position: absolute;
+        background: url(../assets/Trumpet.png);
+        background-position: center;
+        background-size: cover;
+        z-index: 2;
+        width: 29.6rem;
+        height: 21rem;
+        bottom: 6.4rem;
+        right: 6.2rem; }
