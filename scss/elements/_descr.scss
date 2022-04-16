@@ -1,0 +1,119 @@
+.descr {
+  background-color: $color-light-grey;
+  padding: 2.9rem 4.2rem;
+
+  &__el {
+    width: 100%;
+    max-width: 314px;
+    margin: 0 auto;
+    margin-bottom: 4.1rem;
+    background-color: $color-white;
+    padding: 3rem 2.1rem;
+    @include desktop {
+      max-width: 80%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-img {
+      display: block;
+    }
+    .descr__text {
+      @include desktop {
+        width: 60%;
+      }
+    }
+    &-header {
+      text-align: left;
+      font-family: $font-raleway;
+      font-size: 3rem;
+      font-weight: normal;
+      line-height: 3.5rem;
+      letter-spacing: 0;
+      margin-bottom: 1.6rem;
+    }
+
+    &-paragraph {
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      font-weight: normal;
+      text-align: left;
+    }
+
+    .el-img-1,
+    .el-img-2 {
+      margin-bottom: 2.6rem;
+      @include desktop {
+        width: 200px;
+        height: 200px;
+      }
+      &::before {
+        content: "";
+        display: block;
+        border-radius: 50%;
+      }
+    }
+    .el-img-1 {
+      height: 110px;
+      background: url(../../assets/Macbook.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative;
+      transform-style: preserve-3d;
+      @include desktop {
+        order: 2;
+      }
+
+      &::before {
+        width: 100px;
+        height: 100px;
+        background: $color-redish;
+        position: absolute;
+        right: 20px;
+        top: -20px;
+        transform: translateZ(-1px);
+      }
+    }
+    .el-img-2 {
+      height: 135px;
+      background: url(../../assets/iPhone.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative;
+      transform-style: preserve-3d;
+      &::before {
+        width: 150px;
+        height: 150px;
+        background: $color-primary;
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        transform: translateZ(-1px);
+      }
+    }
+
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      @include desktop {
+        flex-direction: row;
+      }
+    }
+
+    .el-img-3 {
+      order: 3;
+      height: 208px;
+      background: url(../../assets/Trumpet.png), $color-green;
+      background-position: -20px 40px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-top: 1.5rem;
+      @include desktop {
+        width: 40%;
+        height: 300px;
+      }
+    }
+  }
+}

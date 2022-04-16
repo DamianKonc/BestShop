@@ -1,0 +1,164 @@
+.pricing {
+  margin-top: 6.1rem;
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 55px;
+    align-items: center;
+  }
+  &__header {
+    font-family: $font-raleway;
+    font-size: 3.6rem;
+    font-weight: normal;
+    line-height: 4.2rem;
+    text-align: center;
+    margin-bottom: 1.4rem;
+    @include desktop {
+      width: 100%;
+      margin-bottom: 100px;
+    }
+  }
+  &__el {
+    width: 100%;
+    max-width: 293px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    border-radius: 18px;
+    position: relative;
+    margin-bottom: 80px;
+    @include desktop {
+      flex-direction: column;
+      padding: 51px;
+      max-height: 461px;
+    }
+
+    &:nth-child(3) {
+      min-width: 339px;
+      padding: 15px 0;
+      box-shadow: 5px 10px 27px #07ace629;
+      @include desktop {
+        padding: 61px;
+        max-height: 500px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 7.7rem;
+    }
+    &-aside {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    &-header {
+      text-align: left;
+      font-family: $font-raleway;
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 1px;
+    }
+    &-price {
+      text-align: left;
+      font-size: 4.6rem;
+      font-weight: 300;
+      line-height: 2px;
+    }
+    &-list {
+      list-style: none;
+      margin-top: 25px;
+      margin-bottom: 51px;
+      &-el {
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 4.1rem;
+        font-weight: normal;
+      }
+    }
+    &-btn {
+      position: absolute;
+      padding: 16px 57px;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      background-color: antiquewhite;
+      border-radius: 23px;
+      font-size: 1.3rem;
+      line-height: 4.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+  }
+}
+
+.ok {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: url("../../assets/Ckechmark-1.svg");
+    background-position: center;
+    background-size: cover;
+    margin-right: 5px;
+  }
+}
+
+.not-ok {
+  &::before {
+    content: "X";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 10px;
+    text-align: center;
+    color: $color-redish;
+    border: 1px solid $color-redish;
+    border-radius: 2px;
+  }
+}
+
+.text-color-red {
+  color: $color-redish;
+}
+
+.border-color-red {
+  border-color: $color-redish;
+}
+
+.bcg-color-red {
+  background-color: $color-redish;
+}
+.text-color-blue {
+  color: $color-primary;
+}
+
+.border-color-blue {
+  border-color: $color-primary;
+}
+
+.bcg-color-blue {
+  background-color: $color-primary;
+}
+
+.text-color-green {
+  color: $color-green;
+}
+
+.border-color-green {
+  border-color: $color-green;
+}
+
+.bcg-color-green {
+  background-color: $color-green;
+}

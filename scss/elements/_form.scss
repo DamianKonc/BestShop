@@ -1,0 +1,154 @@
+.form {
+  width: 100%;
+  max-width: 352px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  height: 80vh;
+  @include desktop {
+    display: flex;
+    max-width: 80%;
+    height: 50vh;
+  }
+
+  &__info {
+    @include desktop {
+      width: 50%;
+    }
+  }
+  &__header {
+    text-align: left;
+    font-family: $font-raleway;
+    font-size: 4rem;
+    line-height: 47px;
+    font-weight: normal;
+  }
+  &__paragraph {
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 22px;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+  &__email,
+  &__tel {
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 22px;
+    font-weight: 600;
+    color: $color-grey;
+    position: relative;
+    margin-left: 36px;
+    margin-bottom: 56px;
+    @include desktop {
+      display: inline-block;
+    }
+  }
+  &__tel {
+    @include desktop {
+      margin-left: 50px;
+    }
+  }
+}
+
+.form__main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 157px;
+  &-name-text,
+  &-email-text {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 15px;
+    font-weight: bold;
+    color: $color-primary;
+  }
+  &-name-input,
+  &-email-input {
+    border: none;
+    border-bottom: 1px solid #95989a;
+  }
+  &-btn {
+    text-align: left;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-weight: bold;
+    color: $color-white;
+    padding: 20px 97px;
+    background-color: $color-primary;
+    border-radius: 35px;
+    box-shadow: 5px 10px 14px #07ace629;
+    max-width: 226px;
+    margin-left: 40%;
+    margin-top: 21px;
+  }
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.form__email::before {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background: url("../../assets/Mail\ Icon.svg");
+  position: absolute;
+  top: 0;
+  left: -36px;
+  @include desktop {
+    left: -26px;
+  }
+}
+
+.form__tel::before {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background: url("../../assets/Phone\ Icon.svg");
+  position: absolute;
+  top: 0;
+  left: -36px;
+  @include desktop {
+    left: -26px;
+  }
+}
+
+.form__main-warunki {
+  gap: 15px;
+  margin-top: 31px;
+
+  label {
+    display: block;
+    position: relative;
+  }
+  .form__main-check {
+    appearance: none;
+    display: none;
+  }
+
+  .form__main-check-btn {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+  }
+
+  .form__main-check:checked ~ .form__main-check-btn {
+    background-color: blue;
+  }
+  .form__main-text {
+    width: 90%;
+    margin-left: 30px;
+    display: inline-block;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    font-weight: normal;
+    color: #707070;
+  }
+}
