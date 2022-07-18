@@ -22,6 +22,7 @@ function printQuantity(e) {
         }`;
         listItemArr[0].style.display = "block";
         totalPrice.style.display = "block";
+        changeTotalSum();
       }
     });
   }
@@ -35,13 +36,14 @@ function printQuantity(e) {
           e.currentTarget.value * 0.5
         }`;
         listItemArr[1].style.display = "block";
+        changeTotalSum();
       }
     });
   }
 }
 
 calcInputArr.forEach(function (el) {
-  el.addEventListener("keyup", printQuantity);
+  el.addEventListener("input", printQuantity);
 });
 
 selectDropdown.addEventListener("click", function () {
@@ -66,12 +68,15 @@ dropdownMenuList.forEach(function (el) {
     switch (e.currentTarget.dataset.value) {
       case "basic":
         dataPack.querySelector(".item__price").innerHTML = `$0`;
+        changeTotalSum();
         return;
       case "professional":
         dataPack.querySelector(".item__price").innerHTML = `$25`;
+        changeTotalSum();
         return;
       case "premium":
         dataPack.querySelector(".item__price").innerHTML = `$60`;
+        changeTotalSum();
         return;
     }
   });
@@ -87,12 +92,14 @@ checkboxLabels.forEach(function (el) {
             "[data-id=accounting] .item__price"
           ).textContent = "$0";
           listItemArr[3].style.display = "block";
+          changeTotalSum();
           return;
         case "terminal":
           document.querySelector(
             "[data-id=terminal] .item__price"
           ).textContent = "$0";
           listItemArr[4].style.display = "block";
+          changeTotalSum();
           return;
       }
     } else {
@@ -102,12 +109,14 @@ checkboxLabels.forEach(function (el) {
             "[data-id=accounting] .item__price"
           ).textContent = "$50";
           listItemArr[3].style.display = "block";
+          changeTotalSum();
           return;
         case "terminal":
           document.querySelector(
             "[data-id=terminal] .item__price"
           ).textContent = "$50";
           listItemArr[4].style.display = "block";
+          changeTotalSum();
           return;
       }
     }
@@ -116,15 +125,28 @@ checkboxLabels.forEach(function (el) {
 
 // totalPrice
 
-itemPriceArr.forEach(function (el) {
-  sum = 0;
-  slicedString = 0;
-  number = 0;
-  el.addEventListener("DOMSubtreeModified", function (e) {
-    slicedString = e.currentTarget.textContent.slice(1);
-    number = parseFloat(slicedString);
-    // console.log(number);
-    sum = +number;
-    totalPrice.textContent = sum;
+function updateSum() {
+  const sum = [...itemPriceArr].reduce(
+    (prev, curr) => +curr.innerText.replace("$", "") + prev,
+    0
+  );
+
+  totalPrice.textContent = `$${sum}`;
+  sum
+    ? (totalPrice.style.display = "block")
+    : (totalPrice.style.display = "none");
+}
+
+function updateRibbon(element, price) {
+  element.innerHTML = `$<span>${price}</span>`;
+  updateSum();
+}
+
+function changeTotalSum() {
+  itemPriceArr.forEach(function (el) {
+    price = parseFloat(el.textContent.substring(1));
+    updateRibbon(el, price);
+
+    totalPrice.classList.add("total__price");
   });
-});
+}
