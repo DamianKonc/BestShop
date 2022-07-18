@@ -14,19 +14,19 @@ function compileSass(done) {
     .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest(entryPath + "/css"));
+    .pipe(gulp.dest(entryPath + "/dist/css"));
 
   done();
 }
 
 function watcher(done) {
   browserSync.init({
-    server: "./" + entryPath,
+    server: "./dist/" + entryPath,
   });
 
   gulp.watch(entryPath + "/scss/**/*.scss", gulp.series(compileSass, reload));
-  gulp.watch(entryPath + "/*.html", gulp.series(reload));
-  gulp.watch(entryPath + "/js/*.js", gulp.series(reload));
+  gulp.watch(entryPath + "/dist/*.html", gulp.series(reload));
+  gulp.watch(entryPath + "/dist/js/*.js", gulp.series(reload));
 
   done();
 }
